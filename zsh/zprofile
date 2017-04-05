@@ -1,0 +1,3 @@
+[[ -f ~/.zshrc ]] && . ~/.zshrc
+
+[[ -z $DISPLAY && XDG_VTRN -eq 1 ]] && exec startx
