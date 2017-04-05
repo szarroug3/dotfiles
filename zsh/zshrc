@@ -23,3 +23,7 @@ setopt nomatch
 unsetopt appendhistory autocd beep extendedglob notify
 bindkey -v
 # End of lines configured by zsh-newuser-install
+
+# Things I changed
+# show current directory at prompt
+export PS1="%d > "
