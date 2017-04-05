@@ -26,4 +26,4 @@ bindkey -v
 
 # Things I changed
 # show current directory at prompt
-export PS1="%d > "
+export PS1="%20<...<%~%<< > "
