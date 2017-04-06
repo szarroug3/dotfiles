@@ -83,7 +83,7 @@ while true; do
 #    echo "%{B#2E3440} $(clock) $(volume) $(mail) $(bat) $(wifi) %{B-}%{c} $(workspace) %{r}%{B-} %{B#3B4252}$(music)%{B#2E3440} $(windowtitle) %{B-}"
 #    echo "%{B#c0303048} $(clock) $(volume) $(mail) $(bat) $(wifi) %{B-}%{c} $(workspace) %{r}%{B-} %{B#3b3b4b}$(music)%{B#c0303048} $(windowtitle) %{B-}"
 #    echo "%{B#c0303048} $(clock) $(volume) $(mail) $(bat) $(wifi) %{B-}%{c} $(workspace) %{r}%{B-} %{B#5d6383}$(music)%{B#c0303048} $(windowtitle) %{B-}"
-echo "%{B#c0303048}$(workspace)%{B-}$(windowtitle)%{r}$(music)%{B#c0303048}$(volume)  $(bat)  $(clock)%{B-}"
+    echo "%{B#c0303048}$(workspace)%{B-}$(windowtitle)%{r}$(music)%{B#c0303048}$(volume)  $(bat)  $(clock)%{B-}"
     sleep .1;
 done |
 # -f '-xos4-terminus-medium-r-normal--12-120-72-72-c-60-iso10646-1'\

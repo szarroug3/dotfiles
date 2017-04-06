@@ -19,6 +19,7 @@ bar.sh
 
 random-color-picker
 * [hsetroot](https://aur.archlinux.org/packages/hsetroot/)
+* update Xresources.d/.colors to use your home directory rather than /home/samreen
 
 thunner
 * set up ~/.thunnerrc with the format shown here https://github.com/malcolmstill/thunner
