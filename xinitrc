@@ -58,5 +58,5 @@ compton --config ~/.config/compton.conf -b &
 /home/samreen/.Xresources.d/random-color-picker &
 xrandr --output VGA-1 --auto &
 
- exec i3 -V >> ~/i3logs/i3log-$(date +'%F-%k-%M-%S') 2>&1
-# exec i3
+# exec i3 -V >> ~/i3logs/i3log-$(date +'%F-%k-%M-%S') 2>&1
+ exec i3
