@@ -21,5 +21,9 @@ random-color-picker
 * [hsetroot](https://aur.archlinux.org/packages/hsetroot/)
 * update Xresources.d/.colors to use your home directory rather than /home/samreen
 
+vim
+* [vim-plug](https://github.com/junegunn/vim-plug)
+* run vim after getting vim-plug and run :PlugInstall
+
 thunner
 * set up ~/.thunnerrc with the format shown here https://github.com/malcolmstill/thunner
