@@ -40,6 +40,8 @@ Plug 'vim-scripts/scratch.vim'
 Plug 'vim-scripts/yankring.vim'
 " Code complete
 Plug 'valloric/youcompleteme', { 'do': function('BuildYCM') }
+" Graphical undo list
+Plug 'sjl/gundo.vim'
 call plug#end()
 
 " Make Nerdtree and Startify both work on startup
