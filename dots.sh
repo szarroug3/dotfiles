@@ -33,5 +33,8 @@ ln -s ${BASEDIR}/zsh/zshrc $HOME/.zshrc
 # Apps
 #.....................
 
+# vim
+ln -s ${BASEDIR}/vim/vimrc $HOME/.vimrc
+
 # bin
 ln -s ${BASEDIR}/bin $HOME/bin
