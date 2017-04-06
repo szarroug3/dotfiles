@@ -17,9 +17,9 @@ pik() {
 	xrdb -merge ~/.Xresources
 }
 setwall() {
-	# wallpaper=$(awk 'NR==5{gsub(/</," ");print $2}' $HOME/.Xresources.d/.colors | cut -d '/' -f6 | rev | cut -c 2- | rev)
-	match="hsetroot -full $walls/$wallpaper.jpg -blur 5"
-	default="hsetroot -full $walls/default.jpg"
+	wallpaper=$(awk 'NR==5{gsub(/</," ");print $2}' $HOME/.Xresources.d/.colors | cut -d '/' -f6 | rev | cut -c 2- | rev)
+	match="hsetroot -fill $walls/$wallpaper.jpg -blur 5"
+	default="hsetroot -fill $walls/default.jpg"
 
 	if [ -f "$walls/$wallpaper.jpg" ]; then
 		$match

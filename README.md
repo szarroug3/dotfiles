@@ -14,7 +14,7 @@ Fonts
 * FiraMono (ttf-fira-mono)
 
 bar.sh
-* iw (set up the wifi function in bar.sh or reove $(wifi) at the bottom
+* [optional] iw (set up the wifi function in bar.sh and add $(wifi) at the bottom where you want it in the bar
 * wmctrl
 
 random-color-picker
