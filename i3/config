@@ -59,10 +59,8 @@ bindsym XF86PowerOff exec --no-startup-id systemctl suspend
 # move to workspace
 assign [instance="urxvt"] $WS1
 assign [class="Vivaldi-stable"] $WS2
-assign [class= "Eclipse"] $WS3
 for_window [instance="urxvt"] focus
 for_window [class="Vivaldi-stable"] focus
-for_window [class="Eclipse"] focus
 
 #..............
 # Applications
@@ -101,10 +99,10 @@ bindsym $mod+d exec --no-startup-id j4-dmenu-desktop --term urxvt --display-bina
 # bindsym $mod+d exec --no-startup-id i3-dmenu-desktop
 
 # change focus
-bindsym $mod+j focus left
-bindsym $mod+k focus down
-bindsym $mod+l focus up
-bindsym $mod+semicolon focus right
+bindsym $mod+h focus left
+bindsym $mod+j focus down
+bindsym $mod+k focus up
+bindsym $mod+l focus right
 
 # alternatively, you can use the cursor keys:
 bindsym $mod+Left focus left
