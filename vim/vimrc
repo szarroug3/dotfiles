@@ -42,6 +42,8 @@ Plug 'vim-scripts/yankring.vim'
 Plug 'valloric/youcompleteme', { 'do': function('BuildYCM') }
 " Graphical undo list
 Plug 'sjl/gundo.vim'
+" Syntax checker
+Plug 'vim-syntastic/syntastic'
 call plug#end()
 
 " Make Nerdtree and Startify both work on startup
@@ -104,7 +106,7 @@ vnoremap <tab> %
 set wrap
 set textwidth=79
 set formatoptions=qrn1
-set colorcolumn=85
+set colorcolumn=101
 
 " Stop being a nub
 nnoremap <up> <nop>
@@ -144,8 +146,10 @@ nnoremap <leader>a :Ack
 nnoremap <leader>v V']
 " open up vimrc in a split window
 nnoremap <leader>ev <C-w><C-v><C-l>:e $MYVIMRC<cr>
-" open a new split window and focus it
-nnoremap <leader>w <C-w>v<C-w>l
+" open a new vertical split window and focus it
+nnoremap <leader>v <C-w>v<C-w>l
+" open a new horizontal split window and focus it
+nnoremap <leader>h <C-w>s<C-w>l
 
 " Use jj to switch back to normal mode from insert mode
 inoremap jj <ESC>
@@ -155,3 +159,15 @@ nnoremap <C-h> <C-w>h
 nnoremap <C-j> <C-w>j
 nnoremap <C-k> <C-w>k
 nnoremap <C-l> <C-w>l
+
+" Get eclim to work with YCM
+let g:EclimCompletionMethod='omnifunc'
+
+" Syntastic settings
+set statusline+=%#warningmsg#
+set statusline+=%{SyntasticStatuslineFlag()}
+set statusline+=%*
+
+let g:syntastic_always_populate_loc_list=1
+let g:syntastic_check_on_open=1
+let g:syntastic_check_on_wq=0

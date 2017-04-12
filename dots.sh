@@ -7,34 +7,34 @@ BASEDIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 #.....................
 
 # xinitrc
-ln -s ${BASEDIR}/xinitrc $HOME/.xinitrc
+ln -sf ${BASEDIR}/xinitrc $HOME/.xinitrc
 
 # Xresources
-ln -s ${BASEDIR}/Xresources $HOME/.Xresources
+ln -sf ${BASEDIR}/Xresources $HOME/.Xresources
 
 # Xresources.d
-ln -s ${BASEDIR}/Xresources.d $HOME/.Xresources.d
+ln -sf ${BASEDIR}/Xresources.d $HOME/.Xresources.d
 
 # i3
-ln -s ${BASEDIR}/i3 $HOME/.config/i3
+ln -sf ${BASEDIR}/i3 $HOME/.config/i3
 
 # compton
-ln -s ${BASEDIR}/compton.conf $HOME/.config/compton.conf
+ln -sf ${BASEDIR}/compton.conf $HOME/.config/compton.conf
 
 #.....................
 # Terminal
 #.....................
 
 # zsh
-ln -s ${BASEDIR}/zsh/zprofile $HOME/.zprofile
-ln -s ${BASEDIR}/zsh/zshrc $HOME/.zshrc
+ln -sf ${BASEDIR}/zsh/zprofile $HOME/.zprofile
+ln -sf ${BASEDIR}/zsh/zshrc $HOME/.zshrc
 
 #.....................
 # Apps
 #.....................
 
 # vim
-ln -s ${BASEDIR}/vim/vimrc $HOME/.vimrc
+ln -sf ${BASEDIR}/vim/vimrc $HOME/.vimrc
 
 # bin
-ln -s ${BASEDIR}/bin $HOME/bin
+ln -sf ${BASEDIR}/bin $HOME/bin
