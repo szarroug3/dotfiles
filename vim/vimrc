@@ -166,7 +166,7 @@ nmap <CR> i<CR><Esc>
 " press tab to insert tab
 nmap <tab> i<tab><Esc>
 " press backspace to erase one letter backwards
-nnoremap <backspace> hx<Esc>
+nnoremap <backspace> X<Esc>
 
 " Syntastic settings
 set statusline+=%#warningmsg#
