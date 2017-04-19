@@ -139,7 +139,7 @@ au Syntax * RainbowParenthesesLoadBraces
 
 " Leader shortcuts cuz lazy
 " remove all trailing whitespace in file
-nnoremap <leader>W :%s/\s\+$//<cr>:let @/=''<CR>
+nnoremap <leader>W :%s/\s\+$//<cr>:let @/=''<CR>:w<CR>
 " Ack
 nnoremap <leader>a :Ack
 " select text that was just pasted
@@ -177,3 +177,4 @@ let g:syntastic_always_populate_loc_list=1
 let g:syntastic_check_on_open=1
 let g:syntastic_check_on_wq=0
 let g:syntastic_aggregate_errors=1
+let g:syntastic_python_pylint_args='--rcfile=~/.config/.pylintrc'
