@@ -15,19 +15,19 @@ Fonts
 * [FontAwesome](https://aur.archlinux.org/packages/ttf-font-awesome/)
 * FiraMono (ttf-fira-mono)
 
-bar.sh
+Bar.sh
 * [optional] iw (fix wifi function in bar.sh and add $(wifi) at the bottom where you want it in the bar)
 * wmctrl
 
-random-color-picker
+Random-color-picker
 * [hsetroot](https://aur.archlinux.org/packages/hsetroot/)
 * update Xresources.d/.colors to use your home directory rather than /home/samreen
 
-vim
+Vim
 * [vim-plug](https://github.com/junegunn/vim-plug)
 * run vim after getting vim-plug and run :PlugInstall
 
-thunner
+Thunner
 * set up ~/.thunnerrc with the format shown here https://github.com/malcolmstill/thunner
 
 Linters
