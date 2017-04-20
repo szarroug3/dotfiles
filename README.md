@@ -29,3 +29,7 @@ vim
 
 thunner
 * set up ~/.thunnerrc with the format shown here https://github.com/malcolmstill/thunner
+
+Linters
+* pylint (python2-pylint for python2 or python-pylint for python3)
+* flake8
