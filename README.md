@@ -26,10 +26,8 @@ Random-color-picker
 Vim
 * [vim-plug](https://github.com/junegunn/vim-plug)
 * run vim after getting vim-plug and run :PlugInstall
+* (Optional) pylint (python2-pylint for python2 or python-pylint for python3)
+* (Optional) flake8
 
-Thunner
+Thunner (only for Google Play Music subscribers)
 * set up ~/.thunnerrc with the format shown here https://github.com/malcolmstill/thunner
-
-Linters
-* pylint (python2-pylint for python2 or python-pylint for python3)
-* flake8
