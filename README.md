@@ -1,4 +1,4 @@
-# Dotfiles for Arch, i3-gaps, and lemonbar
+# Dotfiles for Arch, i3-gaps, and lemonbar-xft
 A lot of this was taken from [okubax's dotfiles](https://github.com/okubax/dotfiles)
 
 Thunner was taken from [malcomstill](https://github.com/malcolmstill/thunner) but I had to fix it on my own and haven't gotten the chance to do a pull request for my fixes
