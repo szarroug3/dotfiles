@@ -95,7 +95,7 @@ done |
 # | zsh
 
 lemonbar -p -d -B#c0262626 -F#A0A0A0\
-	-f "FiraMono:size=6"\
+	-f "FiraMono:size=7"\
 	-f "FontAwesome:size=8"\
 	eDP-1\
 	| zsh
