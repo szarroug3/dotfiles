@@ -17,6 +17,7 @@ rm -rf $HOME/.Xresources.d
 ln -sf ${BASEDIR}/Xresources.d $HOME/.Xresources.d
 
 # i3
+mkdir -p $HOME/.config
 rm -rf $HOME/.config/i3
 ln -sf ${BASEDIR}/i3 $HOME/.config/i3
 
@@ -28,6 +29,7 @@ ln -sf ${BASEDIR}/compton.conf $HOME/.config/compton.conf
 #.....................
 
 # zsh
+ln -sf ${BASEDIR}/zsh/oh-my-zsh $HOME/.oh-my-zsh
 ln -sf ${BASEDIR}/zsh/zprofile $HOME/.zprofile
 ln -sf ${BASEDIR}/zsh/zshrc $HOME/.zshrc
 
