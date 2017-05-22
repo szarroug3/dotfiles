@@ -19,8 +19,9 @@ Fonts
 * FiraMono (ttf-fira-mono)
 
 Bar.sh
-* [optional] iw (fix wifi function in bar.sh and add $(wifi) at the bottom where you want it in the bar)
+* alsa (alsa-utils)
 * wmctrl
+* [optional] iw (fix wifi function in bar.sh and add $(wifi) at the bottom where you want it in the bar)
 
 Random-color-picker
 * [hsetroot](https://aur.archlinux.org/packages/hsetroot/)
