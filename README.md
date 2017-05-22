@@ -13,6 +13,8 @@ General
 
 Zsh
 * urxvt-perls
+* tmux
+* fortune-mod
 
 Fonts
 * [FontAwesome](https://aur.archlinux.org/packages/ttf-font-awesome/)
