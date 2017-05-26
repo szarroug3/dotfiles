@@ -39,4 +39,5 @@ Vim
 * (Optional) flake8
 
 Thunner (only for Google Play Music subscribers)
+* gmusicapi (python package)
 * set up ~/.thunnerrc with the format shown here https://github.com/malcolmstill/thunner
