@@ -5,6 +5,7 @@ Thunner was taken from [malcomstill](https://github.com/malcolmstill/thunner) bu
 
 # Requirements
 General
+* X11 (xorg-server, xorg-xinit, xorg-xrandr)
 * urxvt (rxvt-unicode)
 * [i3-gaps](https://github.com/Airblader/i3)
 * [lemonbar-xft](https://aur.archlinux.org/packages/lemonbar-xft-git/)
