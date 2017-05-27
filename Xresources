@@ -47,7 +47,7 @@ URxvt.scrollBar: false
 !URxvt.boldFont: xft:Monospace:pixelsize=12:antialias=true
 !URxvt.font: xft:Tewi:pixelsize=12:antialias=true
 !URxvt.boldFont: xft:Tewi:pixelsize=12:antialias=true
-URxvt.font: xft:Fira Mono:pixelsize=12:antialias=true
+URxvt.font: xft:Fira Mono:pixelsize=12:antialias=true, xft:Symbola:size=9
 URxvt.boldFont: xft:Fira Mono:pixelsize=12:antialias=true
 
 ! clickable urls
