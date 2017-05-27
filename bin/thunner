@@ -412,20 +412,24 @@ def main():
                     current_song = song
                     status = 'Playing:'
                     song_changed = True
-            elif c == curses.KEY_LEFT:
+            elif c == curses.KEY_LEFT or c == ord('h'):
                 if previous:
                     c_menu, c_list, c_item, c_n = switch_menu(previous.pop())
-            elif c == curses.KEY_RIGHT:
+            elif c == curses.KEY_RIGHT or c == ord('l'):
                 if c_list and "subtree" in c_list[c_item]:
                     previous.append(c_menu)
                     c_menu, c_list, c_item, c_n = switch_menu(c_list[c_item])
-            elif c == curses.KEY_DOWN:
+            elif c == curses.KEY_DOWN or c == ord('j'):
                 if c_item < c_n-1:
                     c_item += 1
+                elif c_item == c_n-1:
+                    c_item = 0
                 c_menu["subtreeline"] = c_item
-            elif c == curses.KEY_UP:
+            elif c == curses.KEY_UP or c == ord('k'):
                 if c_item > 0:
                     c_item -= 1
+                elif c_item == 0:
+                    c_item = c_n-1
                 c_menu["subtreeline"] = c_item
             elif c == ord(' '):
                 if status == 'Playing:':
