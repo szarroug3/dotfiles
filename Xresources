@@ -69,3 +69,6 @@ URxvt.tabbed.title-fg: -2
 URxvt.tabbed.autohide: true
 URxvt.tabbed.new-button: false
 URxvt.tabbed.title: true
+
+! Turn on urgent notification sound
+URxvt.urgentOnBell: true
