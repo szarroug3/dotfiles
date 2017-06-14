@@ -4,6 +4,3 @@
 [submodule "thunner/thunner"]
 	path = bin/thunner
 	url = https://github.com/szarroug3/thunner
-[submodule "thunner"]
-	path = thunner
-	url = git@github.com:szarroug3/thunner
