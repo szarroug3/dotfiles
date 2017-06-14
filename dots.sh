@@ -39,6 +39,7 @@ ln -sf ${BASEDIR}/zsh/zshrc $HOME/.zshrc
 #.....................
 
 ln -sf ${BASEDIR}/gitignore $HOME/.gitignore
+git config --global core.excludesfile ~/.gitignore
 
 #.....................
 # Apps
