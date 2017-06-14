@@ -23,6 +23,9 @@ Fonts
 * [FontAwesome](https://aur.archlinux.org/packages/ttf-font-awesome/)
 * FiraMono (ttf-fira-mono)
 
+Cursors
+* [Capitaine Cursors](https://aur.archlinux.org/packages/capitaine-cursors/)
+
 Bar.sh
 * alsa (alsa-utils)
 * wmctrl
