@@ -4,5 +4,5 @@
 *.swo
 
 # test folders
-/test
-/do_not_submit
+test/
+do_not_submit/
