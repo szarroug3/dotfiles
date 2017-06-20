@@ -13,6 +13,7 @@ General
 * update your PATH to include $HOME/bin
 * compton
 * [j4-dmenu-desktop](https://aur.archlinux.org/packages/j4-dmenu-desktop/)
+* xautolock
 
 Zsh
 * urxvt-perls
