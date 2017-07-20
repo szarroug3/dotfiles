@@ -77,6 +77,7 @@ set showcmd
 set hidden
 set wildmenu
 set wildmode=list:longest
+set wildignorecase
 set visualbell
 set cursorline
 set ttyfast
@@ -86,6 +87,12 @@ set laststatus=2
 set relativenumber
 set number
 set undofile
+
+" Make H and L work as they should
+nnoremap H H5k
+nnoremap L L5j
+vnoremap H H5k
+vnoremap L L5j
 
 " Change leader from \ to ,
 let mapleader = ","
@@ -169,6 +176,9 @@ nmap <tab> i<tab><Esc>
 " press backspace to erase one letter backwards
 nnoremap <backspace> X<Esc>
 
+" Get eclim to work with YCM
+let g:EclimCompletionMethod='omnifunc'
+
 " Syntastic settings
 set statusline+=%#warningmsg#
 set statusline+=%{SyntasticStatuslineFlag()}
@@ -177,7 +187,7 @@ set statusline+=%*
 let g:syntastic_always_populate_loc_list=1
 let g:syntastic_check_on_open=1
 let g:syntastic_check_on_wq=0
-let g:syntastic_aggregate_errors=1
+let g:syntastic_aggregate_errors = 1
 let g:syntastic_python_pylint_args='--rcfile=~/.config/.pylintrc'
 
 " Startify settings
