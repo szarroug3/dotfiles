@@ -72,3 +72,7 @@ URxvt.tabbed.title: true
 
 ! Turn on urgent notification sound
 URxvt.urgentOnBell: true
+
+! keyboard-select
+URxvt.perl-ext-common: ...,keyboard-select
+URxvt.keysym.M-Escape: perl:keyboard-select:activate

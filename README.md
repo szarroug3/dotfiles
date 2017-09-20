@@ -19,6 +19,7 @@ Zsh
 * urxvt-perls
 * tmux
 * fortune-mod
+* [keyboard-select](https://github.com/muennich/urxvt-perls)
 
 Fonts
 * [FontAwesome](https://aur.archlinux.org/packages/ttf-font-awesome/)
