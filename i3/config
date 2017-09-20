@@ -57,7 +57,7 @@ bindsym $mod+XF86PowerOff mode "$mode_system"
 bindsym XF86PowerOff exec --no-startup-id systemctl suspend
 
 # autolock after 5 minutes idle then suspend 10 minutes after that
-exec xautolock -detectsleep -time 5 -locker lock -killtime 10 -killer "systemctl suspend"
+exec --no-startup-id xautolock -detectsleep -time 3 -locker lock -killtime 10 -killer "systemctl suspend"
 
 # move to workspace
 assign [instance="urxvt"] $WS1
