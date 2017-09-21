@@ -19,6 +19,7 @@ Zsh
 * urxvt-perls
 * tmux
 * fortune-mod
+* highlight
 * [keyboard-select](https://github.com/muennich/urxvt-perls)
 
 Fonts
