@@ -4,3 +4,6 @@
 [submodule "thunner/thunner"]
 	path = bin/thunner
 	url = https://github.com/szarroug3/thunner
+[submodule "zsh/zsh-output-highlighting"]
+	path = zsh/zsh-output-highlighting
+	url = https://github.com/l4u/zsh-output-highlighting.git
