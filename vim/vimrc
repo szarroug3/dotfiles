@@ -176,6 +176,9 @@ nmap <tab> i<tab><Esc>
 " press backspace to erase one letter backwards
 nnoremap <backspace> X<Esc>
 
+" Color scheme
+colorscheme molokai
+
 " Get eclim to work with YCM
 let g:EclimCompletionMethod='omnifunc'
 
