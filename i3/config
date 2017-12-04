@@ -31,8 +31,8 @@ gaps outer 20
 # .............
 
 # multimedia keys
-bindsym XF86AudioRaiseVolume exec amixer -q set Master 2dB+ unmute #increase sound volume
-bindsym XF86AudioLowerVolume exec amixer -q set Master 2dB- unmute #decrease sound volume
+bindsym XF86AudioRaiseVolume exec amixer -q set Master 2%+ unmute #increase sound volume
+bindsym XF86AudioLowerVolume exec amixer -q set Master 2%- unmute #decrease sound volume
 bindsym XF86AudioMute exec amixer -q set Master toggle #toggle mute
 
 # brightness
