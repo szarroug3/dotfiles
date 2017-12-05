@@ -85,3 +85,5 @@ rofi.color-active:  #00121212,   #686868,    #00121212,      mag,      fg
 
 !                  'background', 'border', 'separator'
 rofi.color-window:  #ee121212,    blu,      #ee121212
+
+rofi.modi:          run,window
