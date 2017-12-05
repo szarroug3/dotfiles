@@ -1,5 +1,5 @@
 # Dotfiles for Arch, i3-gaps, and lemonbar-xft
-A lot of this was taken from [okubax's dotfiles](https://github.com/okubax/dotfiles)
+A lot of this was taken from [okubax's dotfiles](https://github.com/okubax/dotfiles) and [nvnehi's dotfiles](https://github.com/nvnehi/dotfiles)
 
 Thunner was taken from [malcomstill](https://github.com/malcolmstill/thunner) but I had to fix it on my own and haven't gotten the chance to do a pull request for my fixes
 
@@ -12,7 +12,7 @@ General
 * zsh (set as your default shell)
 * update your PATH to include $HOME/bin
 * compton
-* [j4-dmenu-desktop](https://aur.archlinux.org/packages/j4-dmenu-desktop/)
+* dunst
 * xautolock
 
 Zsh
@@ -21,6 +21,10 @@ Zsh
 * fortune-mod
 * highlight
 * [keyboard-select](https://github.com/muennich/urxvt-perls)
+
+Rofi
+* rofi
+* xdg-utils
 
 Fonts
 * [FontAwesome](https://aur.archlinux.org/packages/ttf-font-awesome/)
