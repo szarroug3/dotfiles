@@ -9,7 +9,6 @@ Xft.rgba: rgb
 Xft.autohint: 0
 Xft.lcdfilter: lcddefault
 Xft.hinting: 1
-Xft.hintstyle: hintfull
 Xft.hintstyle:  hintslight
 
 ! Colors
@@ -43,15 +42,11 @@ URxvt.borderless: false
 URxvt.internalBorder: 3
 URxvt.externalBorder: 3
 URxvt.scrollBar: false
-!URxvt.font: xft:Monospace:pixelsize=12:antialias=true
-!URxvt.boldFont: xft:Monospace:pixelsize=12:antialias=true
-!URxvt.font: xft:Tewi:pixelsize=12:antialias=true
-!URxvt.boldFont: xft:Tewi:pixelsize=12:antialias=true
 URxvt.font: xft:Fira Mono:pixelsize=12:antialias=true, xft:Symbola:size=9
 URxvt.boldFont: xft:Fira Mono:pixelsize=12:antialias=true
 
 ! clickable urls
-URxvt.perl-ext-common: default,matcher,selection-to-clipboard,clipboard
+URxvt.perl-ext-common: default,matcher,selection-to-clipboard,clipboard,keyboard-select
 URxvt.url-launcher: /usr/bin/vivaldi-stable
 URxvt.matcher.button: 1
 
@@ -74,16 +69,15 @@ URxvt.tabbed.title: true
 URxvt.urgentOnBell: true
 
 ! keyboard-select
-URxvt.perl-ext-common: ...,keyboard-select
 URxvt.keysym.M-Escape: perl:keyboard-select:activate
 
 ! rofi
 ! State:           'bg',        'fg',       'bgalt',        'hlbg',   'hlfg'
-rofi.color-normal:  #00121212,   #686868,    #00121212,      mag,      fg
-rofi.color-urgent:  #00121212,   #686868,    #00121212,      mag,      fg
-rofi.color-active:  #00121212,   #686868,    #00121212,      mag,      fg
+rofi.color-normal:  #00121212,   #686868,    #00121212,      bred,     fg
+rofi.color-urgent:  #00121212,   #686868,    #00121212,      bred,     fg
+rofi.color-active:  #00121212,   #686868,    #00121212,      bred,     fg
 
 !                  'background', 'border', 'separator'
-rofi.color-window:  #ee121212,    blu,      #ee121212
+rofi.color-window:  #ee121212,   bred,      #ee121212
 
 rofi.modi:          run,window

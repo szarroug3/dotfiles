@@ -1,14 +1,14 @@
 #!/bin/bash
-HIGHLIGHT="#D8DEE9"
+HIGHLIGHT="#595b59"
 clock() {
-	TIME=$(date "+%I:%M")
-    DATE=$(date "+%a %m/%d/%y")
+	TIME=$(date "+%I.%M")
+    DATE=$(date "+%a %m.%d.%y")
 	echo -n "%{F$HIGHLIGHT}$(printf '%b' "\uf073")%{F-} $DATE  %{F$HIGHLIGHT}$(printf '%b' "\uf017")%{F-} $TIME"
 }
 volume() {
-	MUTE=$(amixer get Master | grep % | sed -n 1p | awk -F '[' '{print $4}' | awk -F ']' '{print $1}')
+	MUTE=$(amixer get Master | grep % | sed -n 1p | awk -F '[' '{print $3}' | awk -F ']' '{print $1}')
 	VOL=$(amixer get Master | grep % | sed -n 1p | awk -F '[' '{print $2}' | awk -F '%]' '{print $1}')
-	if [ $MUTE = 'off' ] || [ $VOL = 0 ]; then
+	if [ "$MUTE" == 'off' ] || [ "$VOL" == 0 ]; then
 		echo -n "%{F$HIGHLIGHT}$(printf '%-b' "\uf026")%{F-}%{O14}Mute"
 	elif (($VOL > 49)); then
 		echo -n "%{F$HIGHLIGHT}$(printf '%-b' "\uf028")%{F-}$(printf ' %03.2d%s' "$VOL" "%")"
@@ -17,19 +17,22 @@ volume() {
 	fi
 }
 wifi() {
-    echo -e "%{F$HIGHLIGHT} \uf1eb %{F-}$(iw wlp2s0 link | grep 'SSID' | cut -c 8-)"
+    echo -e "%{F$HIGHLIGHT}\uf1eb %{F-}$(iw wlp2s0 link | grep 'SSID' | cut -c 8-)"
 }
 mail() {
 	# grabs new email # from offlineimap
-		echo -e "%{F$HIGHLIGHT} \uf0e0 %{F-}$(ls /home/ajibola/mail/Gmail/INBOX/new | wc -l)"
+		echo -e "%{F$HIGHLIGHT}\uf0e0 %{F-}$(ls /home/ajibola/mail/Gmail/INBOX/new | wc -l)"
 }
 music() {
-	if [ ! -f ~/.thunner.info ]; then
-		echo -n ""
-	else
+	if [ -f ~/.thunner.info ]; then
 		STATUS=$(head -n 1 ~/.thunner.info)
 		SONG=$(tail -n 1 ~/.thunner.info)
-        	echo -n " %{F$HIGHLIGHT}$(printf '%b' $STATUS)%{F-} $SONG "
+        echo -n " %{F$HIGHLIGHT}$(printf '%b' $STATUS)%{F-} $SONG "
+	elif [ -s ~/.nowplaying ]; then
+		SONG=$(cat ~/.nowplaying)
+        echo -e "%{F$HIGHLIGHT}\uf025 %{F-} $SONG "
+	else
+		echo -n ""
 	fi
 }
 #Copied from /u/Dylan112
@@ -41,13 +44,13 @@ workspace() {
 	wslist=$(\
         wmctrl -d \
         | awk '/ / {print $2 $9, $10, $11, $12, $13, $14, $15, $16, $17, $18, $19, $20}' ORS=''\
-        | sed -e 's/\s*  //g' \
-        -e 's/\*[ 0-9A-Za-z]*[^ -~]*/  &  /g' \
-		-e 's/\-[ 0-9A-Za-z]*[^ -~]*/%{F#A0A0A0}%{A:i3-msg workspace &:}  &  %{A}%{F#A0A0A0}/g' \
-        -e 's/\*\([ 0-9A-Za-z]*[^ -~]*\)/%{F#FFFFFF}\1%{F-}/g' \
+        | sed -e 's/\s*//g' \
+        -e 's/\*[0-9A-Za-z]*[^ -~]*/& /g' \
+		-e 's/\-[0-9A-Za-z]*[^ -~]*/%{A:i3-msg workspace &:} & %{A}/g' \
+        -e 's/\*\([0-9A-Za-z]*[^ -~]*\)/%{F#FFFFFF}%{+u} \1%{-u}%{F-}/g' \
         -e 's/ -/ /g' \
         )
-        echo -n "%{$workspacenext}%{$workspaceprevious}$wslist%{A}%{A}"
+        echo -e "%{F$HIGHLIGHT} \uf24d %{F-}%{$workspacenext}%{$workspaceprevious}$wslist%{A}%{A}%{F$HIGHLIGHT} \uf120 %{F-}"
 }
 windowtitle(){
 	# Grabs focused window's title
@@ -80,22 +83,14 @@ bat() {
     fi
 }
 while true; do
-#    echo "%{B#2E3440} $(clock) $(volume) $(mail) $(bat) $(wifi) %{B-}%{c} $(workspace) %{r}%{B-} %{B#3B4252}$(music)%{B#2E3440} $(windowtitle) %{B-}"
-#    echo "%{B#c0303048} $(clock) $(volume) $(mail) $(bat) $(wifi) %{B-}%{c} $(workspace) %{r}%{B-} %{B#3b3b4b}$(music)%{B#c0303048} $(windowtitle) %{B-}"
-#    echo "%{B#c0303048} $(clock) $(volume) $(mail) $(bat) $(wifi) %{B-}%{c} $(workspace) %{r}%{B-} %{B#5d6383}$(music)%{B#c0303048} $(windowtitle) %{B-}"
-    echo "%{B#c0303048}$(workspace)%{B-}$(windowtitle)%{r}$(music)%{B#c0303048}$(volume)  $(bat)  $(clock)%{B-}"
+    echo "%{U#BC5A74}$(workspace)$(windowtitle)%{c}$(music)%{r}$(volume)  $(bat)  $(wifi)  $(clock)"
     sleep .1;
 done |
-# -f '-xos4-terminus-medium-r-normal--12-120-72-72-c-60-iso10646-1'\
-#old one was '-g 1280x20+45'
-#lemonbar -p -d -B#c0262626 -F#A0A0A0 -g 1834x20+45+0\
-# -f '-xos4-terminus-medium-r-normal--12-120-72-72-c-60-iso10646-1'\
-# -f '-wuncon-siji-medium-r-normal--10-100-75-75-c-80-iso10646-1'\
-# eDP-1\
-# | zsh
 
-lemonbar -p -d -B#C0262626 -F#A0A0A0\
-	-f "FiraMono:size=7"\
-	-f "FontAwesome:size=8"\
+lemonbar -p -d -B#C0000000 -F#FFFFFF\
+    -g x27++\
+    -f "FiraMono:bold:size=9"\
+	-f "FontAwesome:bold:size=11"\
+    -u 3\
 	eDP-1\
 	| zsh
