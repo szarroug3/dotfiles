@@ -90,7 +90,7 @@ done |
 lemonbar -p -d -B#C0000000 -F#FFFFFF\
     -g x27++\
     -f "FiraMono:bold:size=9"\
-	-f "FontAwesome:bold:size=11"\
+    -f "FontAwesome:bold:size=11"\
     -u 3\
 	eDP-1\
 	| zsh
