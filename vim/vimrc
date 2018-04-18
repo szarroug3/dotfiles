@@ -42,8 +42,8 @@ Plug 'vim-scripts/yankring.vim'
 Plug 'valloric/youcompleteme', { 'do': function('BuildYCM') }
 " Graphical undo list
 Plug 'sjl/gundo.vim'
-" Syntax checker
-Plug 'vim-syntastic/syntastic'
+" Asynchronous Syntax checker
+Plug 'w0rp/ale'
 " Python syntax higlighting
 Plug 'kh3phr3n/python-syntax'
 call plug#end()
@@ -235,16 +235,11 @@ hi link level16c Identifier
 " Get eclim to work with YCM
 let g:EclimCompletionMethod='omnifunc'
 
-" Syntastic settings
-set statusline+=%#warningmsg#
-set statusline+=%{SyntasticStatuslineFlag()}
-set statusline+=%*
-
-let g:syntastic_always_populate_loc_list=1
-let g:syntastic_check_on_open=1
-let g:syntastic_check_on_wq=0
-let g:syntastic_aggregate_errors = 1
-let g:syntastic_python_pylint_args='--rcfile=~/.config/.pylintrc'
+" ALE settings
+let g:ale_linters = {'python': ['pylint']}
+let g:ale_python_pylint_use_global = 1
+let g:ale_python_pylint_executable = 'pylint'
+let g:ale_python_pylint_options = '--rcfile /home/samreen/Work/Git/bti-nextgen/pylint.gate.rc'
 
 " Startify settings
 let g:ascii = [
