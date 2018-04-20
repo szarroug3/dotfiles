@@ -42,6 +42,7 @@ ln -sf /usr/share/icons/Capitaine/cursors $HOME/.icons/default/cursors
 # zsh
 rm -rf $HOME/.oh-my-zsh
 ln -sf ${BASEDIR}/zsh/oh-my-zsh $HOME/.oh-my-zsh
+ln -sf ${BASEDIR}/zsh/zprofile $HOME/.zprofile
 ln -sf ${BASEDIR}/zsh/zshrc $HOME/.zshrc
 cp -r ${BASEDIR}/zsh/zsh-output-highlighting $HOME/.oh-my-zsh/custom/plugins/zsh-output-highlighting
 
@@ -65,6 +66,9 @@ cp ${BASEDIR}/vim/cake.vim $HOME/.vim/colors/cake.vim
 cp ${BASEDIR}/vim/python.vim $HOME/.vim/after/syntax/python.vim
 
 # emacs
+if [[ -d ~/.emacs.d ]]
+    mkdir $HOME/.emacs.d
+fi
 ln -sf ${BASEDIR}/emacs/emacs $HOME/.emacs
 ln -sf ${BASEDIR}/emacs/themes $HOME/.emacs.d/themes
 

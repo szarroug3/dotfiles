@@ -29,14 +29,17 @@
 (global-evil-leader-mode)
 (evil-leader/set-leader ",")
 (evil-leader/set-key
-  "v" 'split-window-right
-  "h" 'split-window-below)
+  "cc" 'comment-line
+  "cu" 'comment-line
+  "h" '(lambda () (interactive)(split-window-vertically) (other-window 1))
+  "v" '(lambda () (interactive)(split-window-horizontally) (other-window 1))
+  "w" 'whitespace-cleanup)
 
 ;; install and use buffer-move
-;; (global-set-key (kbd "C-j") 'buf-move-down)
-;; (global-set-key (kbd "C-k") 'buf-move-up)
-;; (global-set-key (kbd "C-h") 'buf-move-left)
-;; (global-set-key (kbd "C-l") 'buf-move-right)
+(global-set-key (kbd "C-j") 'windmove-down)
+(global-set-key (kbd "C-k") 'windmove-up)
+(global-set-key (kbd "C-h") 'windmove-left)
+(global-set-key (kbd "C-l") 'windmove-right)
 
 ;; install and use evil-mode
 (use-package evil
@@ -44,27 +47,21 @@
 (require 'evil)
 (evil-mode t)
 
-;; install and use linum-relative
-(use-package linum-relative
-  :ensure t)
-(require 'linum-relative)
-(linum-on)
-
 ;; install and use KeyChord
-;; (use-package KeyChord
-;;   :ensure t)
-;; (require 'keychord)
-;; ;;Exit insert mode by pressing j and then j quickly
-;; (setq key-chord-two-keys-delay 0.5)
-;; (key-chord-define evil-insert-state-map "jj" 'evil-normal-state)
-;; (key-chord-mode 1)
+(use-package use-package-chords
+  :ensure t)
+(require 'key-chord)
+;; Exit insert mode by pressing jj
+(setq key-chord-two-keys-delay 0.1)
+(key-chord-define evil-insert-state-map "jj" 'evil-normal-state)
+(key-chord-mode 1)
 
 ;; change font
 (set-frame-font "FiraMono-9")
 
 ;; disable menu, scroll, and tool bars
-(menu-bar-mode -1) 
-(toggle-scroll-bar -1) 
+(menu-bar-mode -1)
+(toggle-scroll-bar -1)
 (tool-bar-mode -1)
 
 ;; STUFF BELOW THIS HAVE BEEN ADDED BY EMACS -- DO NOT  TOUCH
@@ -78,7 +75,7 @@
     ("0c09ed1221b9eb700b25edcf4dea2d52e231916d04f18dcf54fc854ffd92970d" "c3c0a3702e1d6c0373a0f6a557788dfd49ec9e66e753fb24493579859c8e95ab" default)))
  '(package-selected-packages
    (quote
-    (buffer-move evil-leader linum-relative KeyChord helm Helm use-package evil-visual-mark-mode))))
+    (spacemacs use-package-chords buffer-move evil-leader linum-relative KeyChord helm Helm use-package evil-visual-mark-mode))))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.

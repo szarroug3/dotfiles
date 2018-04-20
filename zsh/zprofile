@@ -1,0 +1,5 @@
+[[ -f ~/.zshrc ]] && . ~/.zshrc
+
+export PATH=$PATH:~/bin:$HOME/.Xresources.d &&
+export EDITOR=vim &&
+export VISUAL=vim &&
