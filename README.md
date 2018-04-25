@@ -14,6 +14,8 @@ General
 * compton
 * dunst
 * xautolock
+* emacs
+* unclutter
 
 Zsh
 * urxvt-perls
@@ -52,3 +54,6 @@ Thunner (only for Google Play Music subscribers)
 * gmusicapi (python package)
 * mplayer
 * set up ~/.thunnerrc with the format shown here https://github.com/malcolmstill/thunner
+
+Emacs
+* Run emacs as a daemon using "systemctl --user enable --now emacs" after running dots.sh

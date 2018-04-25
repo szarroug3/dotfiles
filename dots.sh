@@ -66,11 +66,13 @@ cp ${BASEDIR}/vim/cake.vim $HOME/.vim/colors/cake.vim
 cp ${BASEDIR}/vim/python.vim $HOME/.vim/after/syntax/python.vim
 
 # emacs
-if [[ -d ~/.emacs.d ]]
-    mkdir $HOME/.emacs.d
-fi
+rm -rf $HOME/.emacs.d
+mkdir $HOME/.emacs.d
+mkdir $HOME/.config/systemd
+mkdir $HOME/.config/systemd/user
 ln -sf ${BASEDIR}/emacs/emacs $HOME/.emacs
 ln -sf ${BASEDIR}/emacs/themes $HOME/.emacs.d/themes
+ln -sf ${BASEDIR}/emacs/emacs.service $HOME/.config/systemd/user/emacs.service
 
 # bin
 rm -rf $HOME/bin
