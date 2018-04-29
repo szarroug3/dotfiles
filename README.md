@@ -10,7 +10,6 @@ General
 * [i3-gaps](https://github.com/Airblader/i3)
 * [lemonbar-xft](https://aur.archlinux.org/packages/lemonbar-xft-git/)
 * zsh (set as your default shell)
-* update your PATH to include $HOME/bin
 * compton
 * dunst
 * xautolock
