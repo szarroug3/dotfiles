@@ -12,9 +12,13 @@ General
 * zsh (set as your default shell)
 * compton
 * dunst
-* xautolock
 * emacs
 * unclutter
+
+Lock
+* imagemagic or scrot
+* xautolock
+* [i3lock-color-git](https://aur.archlinux.org/packages/i3lock-color-git/)
 
 Zsh
 * urxvt-perls
