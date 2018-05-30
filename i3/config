@@ -59,13 +59,6 @@ bindsym XF86PowerOff exec --no-startup-id systemctl suspend
 # autolock after 5 minutes idle then suspend 10 minutes after that
 exec --no-startup-id xautolock -detectsleep -time 3 -locker lock -killtime 10 -killer "systemctl suspend"
 
-# move to workspace
-assign [class="Vivaldi-stable"] $WS2
-assign [class="calibre-gui"] $WS3
-for_window [instance="urxvt"] focus
-for_window [class="Vivaldi-stable"] focus
-for_window [class="calibre-gui"] focus
-
 #..............
 # Applications
 # .............

@@ -65,9 +65,6 @@ URxvt.tabbed.autohide: true
 URxvt.tabbed.new-button: false
 URxvt.tabbed.title: true
 
-! Turn on urgent notification sound
-URxvt.urgentOnBell: true
-
 ! keyboard-select
 URxvt.keysym.M-Escape: perl:keyboard-select:activate
 
@@ -85,3 +82,4 @@ rofi.color-active:  #00121212,   #686868,    #00121212,      red,     fg
 rofi.color-window:  #ee121212,   red,        #ee121212
 
 rofi.modi:          run,window
+rofi.font:          Fira Mono 12

@@ -33,7 +33,7 @@ mkdir -p $HOME/.icons
 mkdir -p $HOME/.icons/default
 rm $HOME/.icons/default/cursors
 ln -sf ${BASEDIR}/icons/index.theme $HOME/.icons/default/index.theme
-ln -sf /usr/share/icons/Capitaine/cursors $HOME/.icons/default/cursors
+ln -sf /usr/share/icons/capitaine-cursors/cursors $HOME/.icons/default/cursors
 
 #.....................
 # Terminal
